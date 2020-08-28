@@ -18,4 +18,4 @@ def data():
 
 if __name__ == '__main__':
     on_startup()
-    app.run(debug=True)
+    app.run()

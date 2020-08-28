@@ -58,7 +58,7 @@ def _convert_from_csv_to_sqlite():
 
 
 def get_top_10_passengers():
-    passengers = Passenger.select().where(Passenger.age>=18, Passenger.age!='')\
+    passengers = Passenger.select().where(Passenger.age>=18, Passenger.age!=None)\
             .order_by(Passenger.age.asc()).limit(10).dicts()
     return list(p for p in passengers)
 
